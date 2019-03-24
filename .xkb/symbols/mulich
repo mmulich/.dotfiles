@@ -1,0 +1,29 @@
+
+
+partial modifier_keys
+xkb_symbols "tab_as_backspace" {
+  key <TAB> { [ BackSpace ] };
+};
+
+partial modifier_keys
+xkb_symbols "caps_as_return" {
+  replace key <CAPS> { [ Return ] };
+  // modifier_map Return { <CAPS> };
+};
+
+partial modifier_keys
+xkb_symbols "ralt_as_tab" {
+  key <RALT> { [ Tab, ISO_Left_Tab ] };
+};
+
+partial modifier_keys
+xkb_symbols "lsuper_as_lalt" {
+  key <LWIN> { [ Alt_L, Meta_L ] };  
+  modifier_map Mod1 { <LWIN> };
+};
+
+partial modifier_keys
+xkb_symbols "rctrl_as_lsuper" {
+  replace key <RCTL> { [ Super_L ] };
+  modifier_map Mod4 { <RCTL> };
+};
